@@ -1,45 +1,35 @@
 import PropTypes from "prop-types";
-import React from "react";
+import React, {useRef, useEffect} from "react";
 
 import Header from "./header";
 
-function Layout({ children }) {
-  return (
-    <div className="flex flex-col font-sans min-h-screen text-gray-900">
-      <Header />
+function Layout({ children, onHeightUpdate, onHeaderUpdate}) {
+  const ref= useRef();
+  const ref1= useRef();
 
-      <main className="flex flex-col flex-1 md:justify-center max-w-4xl mx-auto px-4 py-8 md:p-8 w-full">
+  useEffect(() => {
+    const h = ref.current.clientHeight;
+    console.log('h', h);
+    onHeightUpdate(h);
+    onHeaderUpdate(ref1.current.clientHeight);
+  }, [])
+
+  return (
+    <div ref={ref}className="flex flex-col font-sans min-h-screen text-gray-900">
+      <Header ref={ref1}/>
+
+      <main className="flex flex-col flex-1 w-full">
         {children}
       </main>
 
-      <footer className="bg-blue-700">
-        <nav className="flex justify-between max-w-4xl mx-auto p-4 md:p-8 text-sm">
-          <p className="text-white">
-            Created by{` `}
-            <a
-              className="font-bold no-underline text-white"
-              href="https://bryant.io"
-            >
-              Taylor Bryant
-            </a>
-          </p>
-
-          <p>
-            <a
-              className="font-bold no-underline text-white"
-              href="https://github.com/taylorbryant/gatsby-starter-tailwind"
-            >
-              GitHub
-            </a>
-          </p>
-        </nav>
-      </footer>
     </div>
   );
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  onHeightUpdate: PropTypes.func,
+  onHeaderUpdate: PropTypes.func
 };
 
 export default Layout;

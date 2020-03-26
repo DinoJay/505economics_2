@@ -8,14 +8,18 @@ function Layout({ children, onHeightUpdate, onHeaderUpdate}) {
   const ref1= useRef();
 
   useEffect(() => {
-    const h = ref.current.clientHeight;
-    console.log('h', h);
-    onHeightUpdate(h);
-    onHeaderUpdate(ref1.current.clientHeight);
+    // const h = ref.current.clientHeight;
+    // console.log('h', h);
+    // window.addEventListener("resize", () => {
+      onHeightUpdate(window.innerHeight);
+      onHeaderUpdate(ref1.current.clientHeight);
+    // });
+
+
   }, [])
 
   return (
-    <div ref={ref}className="flex flex-col font-sans min-h-screen text-gray-900">
+    <div ref={ref}className="flex flex-grow flex-col font-sans min-h-screen h-full text-gray-900">
       <Header ref={ref1}/>
 
       <main className="flex flex-col flex-1 w-full">

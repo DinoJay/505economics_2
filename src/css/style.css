@@ -3,3 +3,13 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.max-w-text {
+  max-width: 28rem;
+}
+
+@responsive {
+  .text-width {
+    width: 28rem;
+  }
+}

@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import bg from '../images/background.jpg';
 import bg2 from '../images/bg-2.jpg';
+import codeBg from '../images/code.jpg';
 import bookStack from '../images/book-icon.png';
 import cd from '../images/cd-icon.png';
 import cert from '../images/cert-icon.png';
@@ -26,7 +27,7 @@ const Landing = ({height}) => {
             </div>
 
         <img
-          style={{filter: 'brightness(70%)'}}
+          style={{filter: 'brightness(70%) blur(1px)'}}
           alt="background"
           className="absolute h-full w-full"
           src={bg}
@@ -48,7 +49,7 @@ const About = ({height}) => {
 We focus on supporting governments and organisations with the development of economic models using new non-traditional data sources.</p>
     </div>
       <img
-        style={{filter: 'brightness(50%)'}}
+        style={{filter: 'brightness(50%) blur(1px)'}}
         alt="background "
         className="absolute w-full h-full object-cover"
         src={bg2}
@@ -92,7 +93,7 @@ and improvement</div>
         </div>
     </div>
       <img
-        style={{filter: 'brightness(50%)'}}
+        style={{filter: 'brightness(50%) blur(1px)'}}
         alt="background"
         className="absolute h-full w-full object-cover"
         src={bg2}
@@ -143,7 +144,7 @@ Sandro is a spatial economist, who specialises in the use of high-resolution sat
         </div>
     </div>
       <img
-        style={{filter: 'brightness(50%)'}}
+        style={{filter: 'brightness(50%) blur(1px)'}}
         alt="background"
         className="absolute h-full w-full object-cover"
         src={bg2}
@@ -153,6 +154,28 @@ Sandro is a spatial economist, who specialises in the use of high-resolution sat
 
 
 Team.propTypes = {height: PropTypes.number}
+
+
+const Contact = ({height}) => {
+      return <section style={{height}} className="flex-grow flex flex-col relative">
+      <div className="mt-16 mx-auto z-10 text-white text-center flex-shrink">
+        <h2 className="text-2xl md:text-3xl font-bold inline-block p-3">Contact Us</h2>
+
+
+      </div>
+        <a href="mailto:someone@example.com"className="mx-auto text-xl 2 p-2 z-10 text-white underline">Click to send email
+            </a>
+        <img
+          style={{filter: 'brightness(70%) blur(1px)'}}
+          alt="background"
+          className="absolute h-full w-full"
+          src={codeBg}
+        />
+
+      </section>
+}
+
+Contact.propTypes = {height: PropTypes.number}
 
 
 function IndexPage() {
@@ -173,6 +196,7 @@ function IndexPage() {
     {height && <About height={height} />}
     {height && <WhatWeDo height={height} />}
     {height && <Team height={height} />}
+    {height && <Contact height={height} />}
 
 
     </Layout>

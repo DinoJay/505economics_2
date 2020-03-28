@@ -21,9 +21,9 @@ import sandro from '../images/sandro.png';
 const Landing = ({height}) => {
       return <section style={{height}} className="flex-grow flex flex-col relative">
       <div className="mt-16 mx-auto z-10 text-white text-center flex-shrink">
-        <h2 className="text-2xl md:text-3xl font-bold inline-block p-3">505 Economics</h2>
+        <h2 className="text-2xl md:text-6xl font-bold inline-block p-3">505 Economics</h2>
 
-        <p className="mx-auto text-xl 2 p-2">Approaches to economics and data science at the cutting edge of research.</p>
+        <p className="mx-auto text-xl md:text-2xl 2 p-2">Approaches to economics and data science at the cutting edge of research.</p>
             </div>
 
         <img
@@ -106,15 +106,15 @@ WhatWeDo.propTypes = {height: PropTypes.number}
 
 
 const Team = () => {
-      return <section style={{}}className="flex-grow flex flex-col relative">
+      return <section style={{}}className="flex-grow flex flex-col relative items-center">
       <div className="z-20 text-white">
         <div className="text-center">
           <h2
-            className="text-2xl font-bold inline-block p-3">
+            className="text-2xl font-bold inline-block p-6">
             Who We Are
           </h2>
         </div>
-        <div className="mx-3">
+        <div className="mx-3 flex flex-wrap justify-center max-w-screen-lg">
           <div className="mb-3 flex flex-col mb-8 items-center">
             <img src={lars} className="w-48 h-48 rounded-full mr-2 mb-3"/>
             <h4 className="text-xl">Lars Ludolph</h4>
@@ -159,11 +159,10 @@ Team.propTypes = {height: PropTypes.number}
 const Contact = ({height}) => {
       return <section style={{height}} className="flex-grow flex flex-col relative">
       <div className="mt-16 mx-auto z-10 text-white text-center flex-shrink">
-        <h2 className="text-2xl md:text-3xl font-bold inline-block p-3">Contact Us</h2>
-
+        <h2 className="text-2xl md:text-4xl font-bold inline-block p-3">Contact Us</h2>
 
       </div>
-        <a href="mailto:someone@example.com"className="mx-auto text-xl 2 p-2 z-10 text-white underline">Click to send email
+        <a href="mailto:someone@example.com"className="mx-auto text-xl md:text-2xl 2 p-2 z-10 text-white underline">Click to send email
             </a>
         <img
           style={{filter: 'brightness(70%) blur(1px)'}}
@@ -185,6 +184,7 @@ function IndexPage() {
   console.log('headerHeight', headerHeight);
 
   console.log('height', height);
+    const h= window.innerHeight;
   return (
     <Layout onHeightUpdate={setHeight} onHeaderUpdate={setHeaderHeight}>
       <SEO
@@ -192,11 +192,11 @@ function IndexPage() {
         title="Home"
       />
 
-    {height && <Landing height={height} />}
-    {height && <About height={height} />}
-    {height && <WhatWeDo height={height} />}
-    {height && <Team height={height} />}
-    {height && <Contact height={height} />}
+    {height && <Landing height={h} />}
+    {height && <About height={h} />}
+    {height && <WhatWeDo height={h} />}
+    {height && <Team height={h} />}
+    {height && <Contact height={h} />}
 
 
     </Layout>

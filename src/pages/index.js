@@ -185,7 +185,6 @@ Contact.propTypes = {height: PropTypes.number}
 
 function IndexPage() {
 
-  const h= window.innerHeight;
   return (
     <Layout
     >
@@ -194,11 +193,11 @@ function IndexPage() {
         title="Home"
       />
 
-    {h && <Landing height={h} />}
-    {h && <About height={h} />}
-    {h && <WhatWeDo height={h} />}
-    {h && <Team height={h} />}
-    {h && <Contact height={h} />}
+    <Landing  />
+    <About  />
+    <WhatWeDo  />
+    <Team  />
+    <Contact  />
 
 
     </Layout>

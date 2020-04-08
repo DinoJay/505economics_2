@@ -1,26 +1,13 @@
 import PropTypes from "prop-types";
-import React, {useRef, useEffect} from "react";
+import React  from "react";
 
-import Header from "./header";
+// import Header from "./header";
 
-function Layout({ children, onHeightUpdate, onHeaderUpdate}) {
-  const ref= useRef();
-  const ref1= useRef();
+function Layout({ children, }) {
 
-  useEffect(() => {
-    // const h = ref.current.clientHeight;
-    // console.log('h', h);
-    // window.addEventListener("resize", () => {
-      onHeightUpdate(window.innerHeight);
-      onHeaderUpdate(ref1.current.clientHeight);
-    // });
-
-
-  }, [])
 
   return (
-    <div ref={ref}className="flex flex-grow flex-col font-sans min-h-screen h-full text-gray-900">
-      <Header ref={ref1}/>
+    <div className="flex flex-grow flex-col font-sans min-h-screen h-full text-gray-900">
 
       <main className="flex flex-col flex-1 w-full">
         {children}

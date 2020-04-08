@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React  from "react";
 import PropTypes from "prop-types";
 
 import Layout from "../components/layout";
@@ -9,6 +9,7 @@ import codeBg from '../images/code.jpg';
 import bookStack from '../images/book-icon.png';
 import cd from '../images/cd-icon.png';
 import cert from '../images/cert-icon.png';
+import logoWhite from '../images/505-logo-white.svg';
 import blueBook from '../images/bluebook-icon.png';
 import openBook from '../images/openbook-icon.png';
 
@@ -18,12 +19,17 @@ import rebecca from '../images/rebecca.jpg';
 import sandro from '../images/sandro.png';
 
 
-const Landing = ({height}) => {
-      return <section style={{height}} className="flex-grow flex flex-col relative">
+const Landing = () => {
+      return <section className="flex-grow flex flex-col relative min-h-screen">
       <div className="mt-16 mx-auto z-10 text-white text-center flex-shrink">
-        <h2 className="text-2xl md:text-6xl font-bold inline-block p-3">505 Economics</h2>
+        <div className="flex p-3 items-center justify-start">
+          <img src={logoWhite} className="w-24 h-24 mr-2"/>
+          <div className="flex flex-col items-start">
+            <h2 className="leading-none text-2xl md:text-6xl font-bold  ">505 Economics</h2>
+            <p className="mx-auto text-xl md:text-2xl 2 ">Approaches to economics and data science at the cutting edge of research.</p>
+            </div>
+        </div>
 
-        <p className="mx-auto text-xl md:text-2xl 2 p-2">Approaches to economics and data science at the cutting edge of research.</p>
             </div>
 
         <img
@@ -38,11 +44,11 @@ const Landing = ({height}) => {
 
 Landing.propTypes = {height: PropTypes.number}
 
-const About = ({height}) => {
-      return <section style={{height}}className="flex-grow flex flex-col relative ">
+const About = () => {
+      return <section className="flex-grow flex flex-col relative min-h-screen">
       <div className="z-20 text-white p-2">
         <div className="text-center">
-          <h2 className="text-2xl font-bold inline-block p-6">About</h2>
+          <h2 className="text-2xl md:text-4xl font-bold inline-block p-6">About</h2>
         </div>
         <p className="m-4 text-lg  mx-auto max-w-text">505 Economics is a boutique economic consultancy. It was set up by a group of doctoral researchers based at the London School of Economics and Political Science. The consultancy specialises in economic modelling, policy evaluation and data analysis.
 
@@ -59,12 +65,12 @@ We focus on supporting governments and organisations with the development of eco
 
 About.propTypes = {height: PropTypes.number}
 
-const WhatWeDo = ({height}) => {
-      return <section style={{height}}className="flex-grow flex flex-col relative">
+const WhatWeDo = () => {
+      return <section className="flex-grow flex flex-col relative min-h-screen">
       <div className="z-20 text-white">
         <div className="text-center">
           <h2
-            className="text-2xl font-bold inline-block p-6">
+            className="text-2xl md:text-4xl font-bold inline-block p-6">
             What We Do!
           </h2>
         </div>
@@ -106,11 +112,11 @@ WhatWeDo.propTypes = {height: PropTypes.number}
 
 
 const Team = () => {
-      return <section style={{}}className="flex-grow flex flex-col relative items-center">
+      return <section className="flex-grow flex flex-col relative items-center min-h-screen">
       <div className="z-20 text-white">
         <div className="text-center">
           <h2
-            className="text-2xl font-bold inline-block p-6">
+            className="text-2xl md:text-4xl font-bold inline-block p-6">
             Who We Are
           </h2>
         </div>
@@ -162,7 +168,7 @@ const Contact = ({height}) => {
         <h2 className="text-2xl md:text-4xl font-bold inline-block p-3">Contact Us</h2>
 
       </div>
-        <a href="mailto:someone@example.com"className="mx-auto text-xl md:text-2xl 2 p-2 z-10 text-white underline">Click to send email
+        <a href="mailto:lars.ludolph@505economics.com "className="mx-auto text-xl md:text-2xl 2 p-2 z-10 text-white underline">Click to send email
             </a>
         <img
           style={{filter: 'brightness(70%) blur(1px)'}}
@@ -179,24 +185,20 @@ Contact.propTypes = {height: PropTypes.number}
 
 function IndexPage() {
 
-  const [height, setHeight] = useState(null);
-  const [headerHeight, setHeaderHeight] = useState(null);
-  console.log('headerHeight', headerHeight);
-
-  console.log('height', height);
-    const h= window.innerHeight;
+  const h= window.innerHeight;
   return (
-    <Layout onHeightUpdate={setHeight} onHeaderUpdate={setHeaderHeight}>
+    <Layout
+    >
       <SEO
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Home"
       />
 
-    {height && <Landing height={h} />}
-    {height && <About height={h} />}
-    {height && <WhatWeDo height={h} />}
-    {height && <Team height={h} />}
-    {height && <Contact height={h} />}
+    {h && <Landing height={h} />}
+    {h && <About height={h} />}
+    {h && <WhatWeDo height={h} />}
+    {h && <Team height={h} />}
+    {h && <Contact height={h} />}
 
 
     </Layout>

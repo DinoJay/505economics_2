@@ -162,8 +162,8 @@ Sandro is a spatial economist, who specialises in the use of high-resolution sat
 Team.propTypes = {height: PropTypes.number}
 
 
-const Contact = ({height}) => {
-      return <section style={{height}} className="flex-grow flex flex-col relative">
+const Contact = () => {
+      return <section className="flex-grow flex flex-col relative min-h-screen">
       <div className="mt-16 mx-auto z-10 text-white text-center flex-shrink">
         <h2 className="text-2xl md:text-4xl font-bold inline-block p-3">Contact Us</h2>
 

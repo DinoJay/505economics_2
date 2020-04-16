@@ -26,7 +26,7 @@ const Landing = () => {
           <img src={logoWhite} className="w-24 h-24 mr-2"/>
           <div className="flex flex-col items-start">
             <h2 className="leading-none text-2xl md:text-6xl font-bold  ">505 Economics</h2>
-            <p className="mx-auto text-xl md:text-2xl 2 ">Approaches to economics and data science at the cutting edge of research.</p>
+            <div className="text-left mx-auto text-lg md:text-2xl 2 ">Approaches to economics and data science at the cutting edge of research.</div>
             </div>
         </div>
 
@@ -46,11 +46,11 @@ Landing.propTypes = {height: PropTypes.number}
 
 const About = () => {
       return <section className="flex-grow flex flex-col relative min-h-screen">
-      <div className="z-20 text-white p-2">
+      <div className="z-20 mx-3 text-white p-2">
         <div className="text-center">
           <h2 className="text-2xl md:text-4xl font-bold inline-block p-6">About</h2>
         </div>
-        <p className="m-4 text-lg  mx-auto max-w-text">505 Economics is a boutique economic consultancy. It was set up by a group of doctoral researchers based at the London School of Economics and Political Science. The consultancy specialises in economic modelling, policy evaluation and data analysis.
+        <p className="text-lg  mx-auto max-w-text">505 Economics is a boutique economic consultancy. It was set up by a group of doctoral researchers based at the London School of Economics and Political Science. The consultancy specialises in economic modelling, policy evaluation and data analysis.
 
 We focus on supporting governments and organisations with the development of economic models using new non-traditional data sources.</p>
     </div>
@@ -160,6 +160,9 @@ Sandro is a spatial economist, who specialises in the use of high-resolution sat
 
 
 Team.propTypes = {height: PropTypes.number}
+// ns23.domaincontrol.com
+// ns24.domaincontrol.com
+
 
 
 const Contact = () => {

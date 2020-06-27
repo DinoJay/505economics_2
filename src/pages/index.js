@@ -17,6 +17,8 @@ import lars from '../images/lars.jpg';
 import yohann from '../images/yohann.jpeg';
 import rebecca from '../images/rebecca.jpg';
 import sandro from '../images/sandro.png';
+import sam from '../images/samwatts.png';
+import mikkel from '../images/mikkel.jpg';
 
 
 const Landing = () => {
@@ -145,6 +147,25 @@ const Team = () => {
             <h3 className="font-bold text-2xl">Spatial Economist</h3>
             <p className="m-4 max-w-text">
 Sandro is a spatial economist, who specialises in the use of high-resolution satellite imagery as well as natural language processing and machine learning. He holds an MSc in Economics and Economic Policy from Stockholm School of Economics and Science Po, and is a doctoral researcher at the London School of Economics. His doctoral research is focused on the determinants of economic development in Africa.
+</p>
+          </div>
+          <div className="mb-6 flex flex-col items-center">
+            <img src={sam} className="w-48 h-48 rounded-full mr-2 object-cover mb-3"/>
+            <h4 className="text-xl">Sam Watts</h4>
+            <h3 className="font-bold text-2xl">Legal Officer</h3>
+            <p className="m-4 max-w-text">
+Sam is 505’s Legal Officer. He is currently a Senior Crown Prosecutor for the UK Crown Prosecution Service. He was previously a Legal Officer for the Australian Federal Police. He is also a serial entrepreneur who has previously founded legal-tech and e-commerce businesses.
+</p>
+          </div>
+          <div className="mb-6 flex flex-col items-center">
+            <img src={mikkel} className="w-48 h-48 rounded-full mr-2 object-cover mb-3"/>
+            <h4 className="text-xl">Mikkel Barslund</h4>
+            <h3 className="font-bold text-2xl">
+Senior Economic Advisor
+</h3>
+            <p className="m-4 max-w-text">
+Mikkel is an economist with extensive experience in think tanks, government and academia. Over the past ten years his work has focused primarily on economic policies within the EU. His main expertise lies in economic modelling and econometric analysis. Mikkel has a keen interest in the effects of population ageing and holds a PhD in Economics from the University of Copenhagen.
+
 </p>
           </div>
         </div>

@@ -19,6 +19,7 @@ import rebecca from '../images/rebecca.jpg';
 import sandro from '../images/sandro.png';
 import sam from '../images/samwatts.png';
 import mikkel from '../images/mikkel.jpg';
+import jan from '../images/janstuckatz.jpg';
 
 
 const Landing = () => {
@@ -127,7 +128,7 @@ const Team = () => {
             <img src={lars} className="w-48 h-48 rounded-full mr-2 mb-3"/>
             <h4 className="text-xl">Lars Ludolph</h4>
             <h3 className="font-bold text-2xl">Executive Director</h3>
-            <p className="m-4 max-w-text">Lars is an economist whose research specialises in the economics of migration and labour markets. He has previously worked for the Centre for European Policy Studies and  the European Commission. He is a doctoral researcher at the London School of Economics</p>
+            <p className="m-4 max-w-text">Lars is an economist whose research specialises in European labour markets, public economics and the political economy of Europe. He has previously worked for the Centre for European Policy Studies, the Central Bank of Malta and the European Commission. He is a doctoral researcher at the London School of Economics.</p>
           </div>
           <div className="mb-8 flex flex-col items-center">
             <img src={yohann} className="w-48 h-48 rounded-full object-cover mb-3"/>
@@ -166,6 +167,14 @@ Senior Economic Advisor
             <p className="m-4 max-w-text">
 Mikkel is an economist with extensive experience in think tanks, government and academia. Over the past ten years his work has focused primarily on economic policies within the EU. His main expertise lies in economic modelling and econometric analysis. Mikkel has a keen interest in the effects of population ageing and holds a PhD in Economics from the University of Copenhagen.
 
+</p>
+          </div>
+          <div className="mb-6 flex flex-col items-center">
+            <img src={jan} className="w-48 h-48 rounded-full mr-2 object-cover mb-3"/>
+            <h4 className="text-xl">Jan Stuckatz</h4>
+            <h3 className="font-bold text-2xl">-</h3>
+            <p className="m-4 max-w-text">
+Jan is a political economist who specializes in machine learning, natural language processing, and the analysis and visualization of big data. He is currently a research fellow at the Institute for Advanced Study in Toulouse where he works on money in politics, inequality, and trade policy. He holds a PhD in political science from the London School of Economics.
 </p>
           </div>
         </div>

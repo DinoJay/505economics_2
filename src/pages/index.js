@@ -172,7 +172,7 @@ Mikkel is an economist with extensive experience in think tanks, government and 
           <div className="mb-6 flex flex-col items-center">
             <img src={jan} className="w-48 h-48 rounded-full mr-2 object-cover mb-3"/>
             <h4 className="text-xl">Jan Stuckatz</h4>
-            <h3 className="font-bold text-2xl">-</h3>
+            <h3 className="font-bold text-2xl">Associate Senior Data Scientist</h3>
             <p className="m-4 max-w-text">
 Jan is a political economist who specializes in machine learning, natural language processing, and the analysis and visualization of big data. He is currently a research fellow at the Institute for Advanced Study in Toulouse where he works on money in politics, inequality, and trade policy. He holds a PhD in political science from the London School of Economics.
 </p>
